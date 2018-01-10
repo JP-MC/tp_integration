@@ -118,16 +118,26 @@ var $new_message = document.getElementById('new-message');
 var $form_wrap = document.getElementById('form-wrap');
 var $save_message = document.getElementById('save-message');
 
+//Splash
+var $splash = document.getElementById('splash');
+
 //Affichage des pages
 $profile_link.addEventListener('click', function(){
+    $splash.style.display = "none";
     $profile.style.display = "block";
     $profile_form.style.display = "none";
     $wall_section.style.display = "none";
+    $profile_link.classList.add('current');
+    $wall_link.classList.remove('current');
+
 }, false);
 $wall_link.addEventListener('click', function(){
+    $splash.style.display = "none";
     $profile.style.display = "none";
     $profile_form.style.display = "none";
     $wall_section.style.display = "block";
+    $profile_link.classList.remove('current');
+    $wall_link.classList.add('current');
 }, false);
 
 //Vérifie les données
@@ -317,6 +327,9 @@ document.addEventListener('click',function(event){
 
         //supprimer l'element de la liste
         articles.splice(message_id,1);
+
+        //Enregistrement
+        localStorage.setItem('articles',JSON.stringify(articles));
 
         //mettre à jour l'affichage
         showArticles(articles);

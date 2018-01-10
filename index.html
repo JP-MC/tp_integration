@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>TP WEB</title>
+    <title>TP Intégration</title>
 </head>
 <body>
     <header><h1>MASN (My Awesome Social Network)</h1></header>
@@ -17,12 +17,12 @@
     </nav>
     <section id="profile-section">
         <article id="profile">
-            <span>Nom : </span><span id="nom"></span><br>
-            <span>Prénom : </span><span id="prenom"></span><br>
-            <span>Adresse : </span><span id="adresse"></span><br>
-            <span>Date de naissance : </span><span id="date-naissance"></span><br>
-            <span>Téléphone : </span><span id="telephone"></span><br>
-            <span>Email : </span><span id="email"></span><br>
+            <h2>Nom</h2><p id="nom"></p>
+            <h2>Prénom</h2><p id="prenom"></p>
+            <h2>Adresse</h2><p id="adresse"></p>
+            <h2>Date de naissance</h2><p id="date-naissance"></p>
+            <h2>Téléphone</h2><p id="telephone"></p>
+            <h2>Email</h2><p id="email"></p>
             <a href="#" id="modify-profile">Modifier le profil</a>
         </article>
         <article id="profile_form">
@@ -35,8 +35,11 @@
             <a href="#" id="validate-profile">Valider</a>
         </article>
     </section>
+
     <section id="wall-section">
+        
         <a href="#" id="new-message">Nouveau message</a>
+
         <section id="form-wrap">
             <div id="message-form">
                 <label for="title"><span>Titre</span></label><input type="text" name="title" id="title" placeholder="Titre"><br>
@@ -44,11 +47,15 @@
                 <input type="button" value="Enregistrer le message" id="save-message">
             </div>
         </section>
-        <div id="messages">
 
-        </div>
+        <div id="messages"></div>
 
     </section>
+
+    <section id="splash">
+        <h2>My Awesome Social Network</h2>
+    </section>
+
     <footer></footer>
     <script src="app.js"></script>
 </body>
