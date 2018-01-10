@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>TP WEB</title>
+</head>
+<body>
+    <header><h1>MASN (My Awesome Social Network)</h1></header>
+    <nav id="main-menu">
+        <ol>
+            <li><a href="#" id="profile-link">Profil</a></li>
+            <li><a href="#" id="wall-link">Mur</a></li>
+        </ol>
+    </nav>
+    <section id="profile-section">
+        <article id="profile">
+            <span>Nom : </span><span id="nom"></span><br>
+            <span>Prénom : </span><span id="prenom"></span><br>
+            <span>Adresse : </span><span id="adresse"></span><br>
+            <span>Date de naissance : </span><span id="date-naissance"></span><br>
+            <span>Téléphone : </span><span id="telephone"></span><br>
+            <span>Email : </span><span id="email"></span><br>
+            <a href="#" id="modify-profile">Modifier le profil</a>
+        </article>
+        <article id="profile_form">
+            <label>Nom</label><input type="text" id="nom_form" value=""><br>
+            <label>Prénom</label><input type="text" id="prenom_form" value=""><br>
+            <label>Adresse</label><input type="text" id="adresse_form" value=""><br>
+            <label>Date de naissance</label><input type="text" id="date-naissance_form" value=""><br>
+            <label>Téléphone</label><input type="text" id="telephone_form" value=""><br>
+            <label>Email</label><input type="text" id="email_form" value=""><br>
+            <a href="#" id="validate-profile">Valider</a>
+        </article>
+    </section>
+    <section id="wall-section">
+        <a href="#" id="new-message">Nouveau message</a>
+        <section id="form-wrap">
+            <div id="message-form">
+                <label for="title"><span>Titre</span></label><input type="text" name="title" id="title" placeholder="Titre"><br>
+                <label for="text"><span>Texte</span></label><textarea name="text" id="text" cols="30" rows="10" placeholder="Texte"></textarea><br>
+                <input type="button" value="Enregistrer le message" id="save-message">
+            </div>
+        </section>
+        <div id="messages">
+
+        </div>
+
+    </section>
+    <footer></footer>
+    <script src="app.js"></script>
+</body>
+</html>
